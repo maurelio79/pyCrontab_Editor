@@ -1,14 +1,14 @@
 pyCrontab_Editor
 ================
 
-A simple pygtk GUI to add script under Linux
+A simple pygtk GUI to add script in crontab under Linux
 
 This GUI helps you to add script under crontab in Linux.
 
-<b>Usage</b>
+<b>Usage</b><br />
 Just run the script with root account and follow the GUI ;-)
 
-<b>/etc/crontab example</b>
+<b>/etc/crontab example</b><br />
 A basic crontab file look like this:
 <pre>
 SHELL=/bin/sh
