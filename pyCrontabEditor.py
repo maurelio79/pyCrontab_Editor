@@ -5,20 +5,19 @@ pygtk.require('2.0')
 import gtk, gobject
 import os
 
-uid = os.getuid()
-if (uid > 0):
-	dialogError = gtk.MessageDialog(None, type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_OK)
-	dialogError.set_markup("You are not root! Run this script with root account.\nBye!")
-	dialogError.run()
-	dialogError.destroy()
-	quit()
-			
+		
 def display_error(data):
 	dialogError = gtk.MessageDialog(None, type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_OK)
 	dialogError.set_markup(data)
 	dialogError.run()
 	dialogError.destroy()
 
+uid = os.getuid()
+if (uid > 0):
+	display_error("You are not root! Run this script with root account.\nBye!")
+	quit()
+	
+	
 class CrontabEditor:
 	def delete_event(self, widget, data):
 		print "Exiting..."
