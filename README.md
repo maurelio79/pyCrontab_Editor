@@ -41,6 +41,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 Don't worry about original /etc/crontab it will backupped in /etc/crontab.bak
 
-A screenshot <a href="https://github.com/maurelio79/pyCrontab_Editor/wiki">here</a>
+A screenshot and something about Cron <a href="https://github.com/maurelio79/pyCrontab_Editor/wiki">here</a>
 
 Enjoy!
