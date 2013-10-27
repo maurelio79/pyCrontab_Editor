@@ -118,6 +118,8 @@ class CrontabEditor:
 		crontab.write(m + "  " + h + "  " + dom + "  " + mon + "  " + dow + "    " + user + "    " + script + "\n")
 		crontab.close()
 		
+		obj.statusBar.push(1, "Crontab modified correctly.")
+		
 			
 	def __init__(self):
 
@@ -253,6 +255,11 @@ class CrontabEditor:
 		self.submitButton = gtk.Button("Apply")
 		self.bottomBox.pack_start(self.submitButton)
 		self.submitButton.show()
+		
+		self.statusBar = gtk.Statusbar()
+		self.boxContainer.pack_start(self.statusBar)
+		self.statusBar.push(1, "Crontab still not modified.")
+		self.statusBar.show()
 		
 		# This will never show, just usefull for me!
 		self.radioHourly = gtk.RadioButton(None, "")
