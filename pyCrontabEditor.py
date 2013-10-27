@@ -26,7 +26,7 @@ class CrontabEditor:
 		return False
 		
 	def see_crontab(self, widget):
-		os.system("cat /etc/crontab | zenity --text-info --title='/etc/fstab' --width='640' --height='480'")
+		os.system("cat /etc/crontab | zenity --text-info --title='/etc/crontab' --width='640' --height='480'")
 		
 	def choose_user(obj, widget):
 		user = obj.comboUser.get_active()
